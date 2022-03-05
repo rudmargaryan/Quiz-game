@@ -2,9 +2,11 @@
   "name": "quiz",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npm start --prefix /client",
+    "server": "nodemon node server.js",
+    "start": "concurrently \"npm run dev\" \"npm run server\""
   },
   "keywords": [],
   "author": "",
